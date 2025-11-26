@@ -1,0 +1,35 @@
+name: Build and Deploy Frontend to GoDaddy (FTP)
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install root deps
+        run: npm ci
+
+      - name: Install frontend deps
+        run: npm --workspace frontend ci
+
+      - name: Build frontend
+        run: npm --workspace frontend run build
+
+      - name: Deploy to FTP (GoDaddy)
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: frontend/dist
+          server-dir: ${{ secrets.FTP_REMOTE_DIR }}
