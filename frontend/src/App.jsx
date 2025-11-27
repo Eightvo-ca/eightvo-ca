@@ -1,36 +1,37 @@
 import React from 'react'
+import logo from './assets/logo.svg'
 
 const highlightPoints = [
-  'Enterprise-ready architecture',
-  'Privacy-first analytics',
-  'Concierge onboarding & support',
+  'Enterprise-grade security and privacy',
+  'Dedicated concierge onboarding',
+  'Human + AI orchestration that stays on-brand',
 ]
 
 const featureTiles = [
   {
-    title: 'No-code orchestration',
+    title: 'No-code journeys',
     description:
-      'Launch smart, multi-channel experiences without touching a line of code. Templates, guardrails, and automation included.',
+      'Design adaptive, multi-channel experiences with drag-and-drop ease and built-in guardrails.',
   },
   {
-    title: 'Adaptive intelligence',
+    title: 'Signals that learn',
     description:
-      'Your data fuels tailored journeys that continuously improve conversion, loyalty, and retention.',
+      'Blend behavioral data with qualitative signals to refine every touchpoint continuously.',
   },
   {
-    title: 'Human in the loop',
+    title: 'Operational clarity',
     description:
-      'Blend automation with curated, human-crafted interventions to keep every interaction on-brand.',
+      'Observability, approvals, and playbooks that keep teams aligned and accountable.',
   },
   {
-    title: 'Live observability',
+    title: 'Enterprise ready',
     description:
-      'A unified, real-time command center that shows impact, trends, and the next best move.',
+      'SSO, SOC2, RBAC, and audit-friendly controls baked into the platform.',
   },
 ]
 
 const stats = [
-  { label: 'Avg. conversion lift', value: '37%' },
+  { label: 'Conversion lift', value: '37%' },
   { label: 'Time to first value', value: '14 days' },
   { label: 'Customer NPS', value: '72' },
 ]
@@ -38,15 +39,15 @@ const stats = [
 const steps = [
   {
     title: 'Discover',
-    copy: 'Connect your stack in minutes with secure, guided setup and instant data validation.',
+    copy: 'Connect your stack securely with guided setup, validation, and a real-time readiness report.',
   },
   {
     title: 'Design',
-    copy: 'Drag, drop, and approve experiences that adapt automatically to your customers.',
+    copy: 'Co-create golden-path journeys with our team while AI refines the micro-moments.',
   },
   {
     title: 'Launch',
-    copy: 'Ship with confidence, backed by observability, alerts, and a dedicated partner.',
+    copy: 'Ship confidently with live observability, alerts, and a partner who stays in the loop.',
   },
 ]
 
@@ -57,26 +58,33 @@ export default function App() {
       <div className="orb orb-right" aria-hidden />
       <header className="nav">
         <div className="brand">
-          <div className="brand-mark">8</div>
+          <div className="logo-mark">
+            <img src={logo} alt="eightVo logo" />
+          </div>
           <span>eightVo</span>
         </div>
         <div className="nav-actions">
-          <a className="ghost" href="#features">Platform</a>
-          <a className="ghost" href="#journey">How it works</a>
+          <a className="ghost" href="#features">
+            Platform
+          </a>
+          <a className="ghost" href="#journey">
+            How it works
+          </a>
           <button className="primary">Request access</button>
         </div>
       </header>
 
       <main className="content">
         <section className="hero">
-          <div>
+          <div className="hero-copy">
             <p className="eyebrow">Customer experience, elevated</p>
             <h1>
-              Build remarkable journeys
-              <span className="accent"> without starting from zero.</span>
+              Build signature journeys that feel bespoke
+              <span className="accent"> for every customer.</span>
             </h1>
             <p className="lede">
-              eightVo combines human creativity with adaptive intelligence so every touchpoint feels bespoke, intentional, and always on brand.
+              eightVo brings your brand to life with orchestration that blends human care, adaptive intelligence, and
+              uncompromising governance—all wrapped in a premium, gold-accented experience.
             </p>
             <div className="cta-row">
               <button className="primary">Book a walkthrough</button>
@@ -113,7 +121,12 @@ export default function App() {
                 </div>
               ))}
             </div>
-            <div className="badge">Secure • SOC2 • SSO</div>
+            <div className="badge">
+              <div className="badge-logo">
+                <img src={logo} alt="eightVo badge" />
+              </div>
+              Secure • SOC2 • SSO
+            </div>
           </div>
         </section>
 
@@ -121,12 +134,19 @@ export default function App() {
           <div className="section-heading">
             <p className="eyebrow">Platform</p>
             <h2>Everything you need to ship world-class experiences</h2>
-            <p className="lede">Purpose-built for modern teams who want momentum without compromising governance or craft.</p>
+            <p className="lede">
+              Purpose-built for modern teams who want momentum without compromising governance or craft.
+            </p>
           </div>
           <div className="feature-grid">
             {featureTiles.map((feature) => (
               <article key={feature.title} className="feature">
-                <h3>{feature.title}</h3>
+                <div className="feature-top">
+                  <div className="feature-icon" aria-hidden>
+                    <span />
+                  </div>
+                  <h3>{feature.title}</h3>
+                </div>
                 <p>{feature.description}</p>
                 <button className="text-button">See details →</button>
               </article>
@@ -138,7 +158,9 @@ export default function App() {
           <div className="section-heading center">
             <p className="eyebrow">Launch with confidence</p>
             <h2>From idea to impact in three steps</h2>
-            <p className="lede">Pair our team with yours to move fast, stay compliant, and delight customers from day one.</p>
+            <p className="lede">
+              Pair our team with yours to move fast, stay compliant, and delight customers from day one.
+            </p>
           </div>
           <div className="steps">
             {steps.map((step, index) => (
@@ -157,7 +179,9 @@ export default function App() {
           <div>
             <p className="eyebrow">Ready when you are</p>
             <h2>Let&apos;s craft your signature experience</h2>
-            <p className="lede">Tell us about your goals—we&apos;ll tailor a private demo with real scenarios from your industry.</p>
+            <p className="lede">
+              Tell us about your goals—we&apos;ll tailor a private demo with real scenarios from your industry.
+            </p>
           </div>
           <div className="cta-actions">
             <button className="primary">Schedule time</button>
@@ -168,7 +192,9 @@ export default function App() {
 
       <footer className="footer">
         <div className="brand">
-          <div className="brand-mark">8</div>
+          <div className="logo-mark">
+            <img src={logo} alt="eightVo logo" />
+          </div>
           <span>eightVo</span>
         </div>
         <p className="footnote">Built for teams who care about every detail. © {new Date().getFullYear()} eightVo.</p>
