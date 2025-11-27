@@ -17,7 +17,7 @@ export default function App() {
         <div className="topbar">
           <div className="brand" aria-label="Eightvo Solution Inc">
             <img
-              src="/IMG_1789.png"
+              src="/eightvo-logo.svg"
               alt="Eightvo Solution Inc logo"
               className="brand__mark"
             />
