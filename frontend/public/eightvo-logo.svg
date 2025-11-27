@@ -1,7 +1,6 @@
 <svg width="1600" height="2000" viewBox="0 0 1600 2000" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
   <title id="title">eightVo monogram</title>
   <desc id="desc">A golden figure-eight floating on a transparent field.</desc>
-  <rect width="1600" height="2000" rx="72" fill="#000" fill-opacity="0.52"/>
   <g filter="url(#shadow)" stroke="#f5c800" stroke-width="70" stroke-linecap="round" stroke-linejoin="round">
     <path d="M800 980c170 0 308-138 308-308S970 364 800 364 492 502 492 672s138 308 308 308Z" fill="none"/>
     <path d="M800 1636c170 0 308-138 308-308s-138-308-308-308-308 138-308 308 138 308 308 308Z" fill="none"/>
