@@ -54,6 +54,34 @@ const portfolio = [
   'Launched a careers portal with streamlined applicant intake and review workflows.'
 ]
 
+const processSteps = [
+  {
+    title: 'Discovery & goals',
+    detail: 'Workshops to align on scope, risks, and success metrics before we commit to a build plan.'
+  },
+  {
+    title: 'Architecture & plan',
+    detail: 'Lean design docs, diagrams, and delivery milestones so everyone knows what is shipping when.'
+  },
+  {
+    title: 'Build & validate',
+    detail: 'Tight feedback loops, demo cadence, and quality checks to keep stakeholders in the loop.'
+  },
+  {
+    title: 'Handover & support',
+    detail: 'Runbooks, instrumentation, and training that keep your team confident after launch.'
+  }
+]
+
+const tech = [
+  'Azure App Service & Functions',
+  'React, Vite, Next.js',
+  'Node.js, Express, NestJS',
+  'PostgreSQL, Prisma',
+  'Azure AD / Auth0',
+  'Docker & GitHub Actions'
+]
+
 const engagement = [
   {
     title: 'Embedded delivery',
@@ -194,6 +222,27 @@ export default function App() {
           </div>
         </section>
 
+        <section className="section process">
+          <div className="section-header">
+            <p className="eyebrow">Delivery approach</p>
+            <h2>Structured to de-risk your launch.</h2>
+            <p className="lede">
+              A predictable engagement model that keeps stakeholders aligned and technical decisions traceable.
+            </p>
+          </div>
+          <div className="timeline">
+            {processSteps.map((step) => (
+              <article key={step.title} className="step">
+                <div className="step-icon" aria-hidden="true">•</div>
+                <div>
+                  <h3>{step.title}</h3>
+                  <p>{step.detail}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
         <section className="section alt">
           <div className="section-header">
             <p className="eyebrow">How we engage</p>
@@ -208,6 +257,21 @@ export default function App() {
                 <h3>{item.title}</h3>
                 <p>{item.detail}</p>
               </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="section tech">
+          <div className="section-header">
+            <p className="eyebrow">Tooling</p>
+            <h2>Built with modern, maintainable tech.</h2>
+            <p className="lede">
+              Proven frameworks and cloud services that balance speed with resilience and compliance.
+            </p>
+          </div>
+          <div className="pill-grid">
+            {tech.map((item) => (
+              <span key={item} className="pill muted">{item}</span>
             ))}
           </div>
         </section>
