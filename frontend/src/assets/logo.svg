@@ -1,0 +1,13 @@
+<svg width="240" height="240" viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="240" height="240" rx="42" fill="#0F0F12"/>
+  <rect x="28" y="28" width="82" height="82" rx="18" fill="#1D1F24"/>
+  <rect x="130" y="28" width="82" height="82" rx="18" fill="#1D1F24"/>
+  <rect x="28" y="130" width="82" height="82" rx="18" fill="#1D1F24"/>
+  <rect x="130" y="130" width="82" height="82" rx="18" fill="#1D1F24"/>
+  <path d="M120 60C142.091 60 160 77.9086 160 100C160 122.091 142.091 140 120 140C97.9086 140 80 122.091 80 100C80 77.9086 97.9086 60 120 60Z" stroke="#F7D24C" stroke-width="16"/>
+  <path d="M120 100C142.091 100 160 117.909 160 140C160 162.091 142.091 180 120 180C97.9086 180 80 162.091 80 140C80 117.909 97.9086 100 120 100Z" stroke="#F7D24C" stroke-width="16"/>
+  <rect x="52" y="52" width="52" height="52" rx="12" fill="#0F0F12" opacity="0.32"/>
+  <rect x="136" y="52" width="52" height="52" rx="12" fill="#0F0F12" opacity="0.24"/>
+  <rect x="52" y="136" width="52" height="52" rx="12" fill="#0F0F12" opacity="0.28"/>
+  <rect x="136" y="136" width="52" height="52" rx="12" fill="#0F0F12" opacity="0.18"/>
+</svg>
