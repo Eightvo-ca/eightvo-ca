@@ -16,8 +16,12 @@ app.get('/api/public/services', (req, res) => {
 });
 
 // Serve static from frontend in production (if built)
+// Resolve to the repo-root `frontend/dist` so deployment artifacts
+// that place the frontend next to the backend are handled correctly.
 if (process.env.NODE_ENV === 'production') {
-  const frontDist = path.join(__dirname, '..', 'frontend', 'dist');
+  // __dirname -> backend/src
+  // go up two levels to repo root, then into frontend/dist
+  const frontDist = path.join(__dirname, '..', '..', 'frontend', 'dist');
   app.use(express.static(frontDist));
   app.get('*', (req, res) => res.sendFile(path.join(frontDist, 'index.html')));
 }
