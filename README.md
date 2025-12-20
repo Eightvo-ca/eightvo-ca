@@ -13,6 +13,14 @@ npm ci
 npm run dev
 ```
 
+If you have an existing snapshot of the EightVo-Solutions-Inc repository on your machine (for example at
+`D:\ddc-material-master\EightVo-Solutions-Inc`), you can sync it into this repo while excluding the Vercel package/config by
+running:
+
+```bash
+./scripts/sync_from_snapshot.sh /path/to/EightVo-Solutions-Inc
+```
+
 Run services individually:
 
 ```powershell
